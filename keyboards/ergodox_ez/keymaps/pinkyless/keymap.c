@@ -251,7 +251,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
         case KC_LBRC:
         case KC_EQL:
-            if ((keycode == KC_LBRC && is_jis_layer) || (keycode == KC_EQL && !is_jis_layer)) {
+            if ((keycode == KC_LBRC && !is_jis_layer) || (keycode == KC_EQL && is_jis_layer)) {
                 return true;
             }
             else if (!record->event.pressed && pseudo_escape_pressed) {
